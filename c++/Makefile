@@ -2,7 +2,7 @@ CC=g++
 
 default: all
 
-all: helloworld casting operators enums structs conditionals
+all: helloworld casting operators enums structs conditionals arrays
 
 helloworld: part-1/helloworld.cpp
 	$(CC) -o ./bin/helloworld ./part-1/helloworld.cpp
@@ -21,6 +21,9 @@ structs: part-1/structs.cpp
 
 conditionals: part-1/conditionals.cpp
 	$(CC) -o ./bin/conditionals ./part-1/conditionals.cpp
+
+arrays: part-1/arrays.cpp
+	$(CC) -o ./bin/arrays ./part-1/arrays.cpp
 
 clean:
 	rm -rf bin/*
