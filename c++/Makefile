@@ -2,7 +2,7 @@ CC=g++
 
 default: all
 
-all: helloworld casting operators enums structs conditionals arrays loops functions
+all: helloworld casting operators enums structs conditionals arrays loops functions pointers memory-allocation
 
 helloworld: part-1/helloworld.cpp
 	$(CC) -o ./bin/helloworld ./part-1/helloworld.cpp
@@ -30,6 +30,12 @@ loops: part-1/loops.cpp
 
 functions: part-1/functions.cpp
 	$(CC) -o ./bin/functions ./part-1/functions.cpp
+
+pointers: part-1/pointers.cpp
+	$(CC) -o ./bin/pointers ./part-1/pointers.cpp
+
+memory-allocation: part-1/memory-allocation.cpp
+	$(CC) -o ./bin/memory-allocation ./part-1/memory-allocation.cpp
 	
 clean:
 	rm -rf bin/*
