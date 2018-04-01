@@ -2,7 +2,7 @@ CC=g++
 
 default: all
 
-all: helloworld casting operators enums structs conditionals arrays loops
+all: helloworld casting operators enums structs conditionals arrays loops functions
 
 helloworld: part-1/helloworld.cpp
 	$(CC) -o ./bin/helloworld ./part-1/helloworld.cpp
@@ -28,5 +28,8 @@ arrays: part-1/arrays.cpp
 loops: part-1/loops.cpp
 	$(CC) -o ./bin/loops ./part-1/loops.cpp
 
+functions: part-1/functions.cpp
+	$(CC) -o ./bin/functions ./part-1/functions.cpp
+	
 clean:
 	rm -rf bin/*
