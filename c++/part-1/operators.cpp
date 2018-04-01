@@ -17,5 +17,11 @@ int main()
 
     std::cout << someDouble << std::endl;
 
+    int i = 34 + 8 * 2 + 21 / 7 % 2;
+    int j = 34 + (8 * 2) + ((21 / 7) % 2);
+
+    std::cout << "!!!Operator precedence:" << std::endl;
+    std::cout << "C++ evaluates *, / and % first followed by addition and subtraction, then the bitwise operators." << std::endl;
+
     return 0;
 }
