@@ -5,7 +5,7 @@ default: all
 all: helloworld casting operators enums structs \
 	 conditionals arrays loops functions pointers \
 	 memory-allocation smart-pointers exceptions \
-	 type-inference classes
+	 type-inference classes vector
 
 helloworld: part-1/helloworld.cpp
 	$(CC) -o ./bin/helloworld ./part-1/helloworld.cpp
@@ -51,6 +51,9 @@ type-inference: part-1/type-inference.cpp
 
 classes: part-1/classes.cpp
 	$(CC) -o ./bin/classes ./part-1/classes.cpp
+
+vector: part-1/vector.cpp
+	$(CC) -o ./bin/vector ./part-1/vector.cpp
 
 clean:
 	rm -rf bin/*
