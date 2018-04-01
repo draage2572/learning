@@ -2,7 +2,10 @@ CC=g++
 
 default: all
 
-all: helloworld casting operators enums structs conditionals arrays loops functions pointers memory-allocation smart-pointers
+all: helloworld casting operators enums structs \
+	 conditionals arrays loops functions pointers \
+	 memory-allocation smart-pointers exceptions \
+	 type-inference
 
 helloworld: part-1/helloworld.cpp
 	$(CC) -o ./bin/helloworld ./part-1/helloworld.cpp
@@ -39,6 +42,12 @@ memory-allocation: part-1/memory-allocation.cpp
 
 smart-pointers: part-1/smart-pointers.cpp
 	$(CC) -o ./bin/smart-pointers ./part-1/smart-pointers.cpp
+
+exceptions: part-1/exceptions.cpp
+	$(CC) -o ./bin/exceptions ./part-1/exceptions.cpp
 	
+type-inference: part-1/type-inference.cpp
+	$(CC) -o ./bin/type-inference ./part-1/type-inference.cpp
+
 clean:
 	rm -rf bin/*
