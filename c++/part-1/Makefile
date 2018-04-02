@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-ansi -pedantic -Wall -g
+CFLAGS=-ansi -pedantic -Wall -g -std=c++14
 
 default: all
 
@@ -56,14 +56,17 @@ classes: classes.cpp
 vector: vector.cpp
 	$(CC) $(CFLAGS) -o bin/vector vector.cpp
 
-project: bin/main.o bin/deps/Employee.o
-	$(CC) $(CFLAGS) -o bin/main bin/main.o bin/deps/Employee.o
+project: bin/main.o bin/deps/Employee.o bin/deps/Database.o
+	$(CC) $(CFLAGS) -o bin/main bin/main.o bin/deps/Employee.o bin/deps/Database.o
 
-bin/main.o: main.cpp bin/deps/Employee.o
+bin/main.o: main.cpp bin/deps/Employee.o bin/deps/Database.o
 	$(CC) $(CFLAGS) -o bin/main.o -c main.cpp
 
 bin/deps/Employee.o: deps/Employee.cpp deps/Employee.h
 	$(CC) $(CFLAGS) -o bin/deps/Employee.o -c deps/Employee.cpp
 
+bin/deps/Database.o: deps/Database.cpp deps/Database.h deps/Employee.h
+	$(CC) $(CFLAGS) -o bin/deps/Database.o -c deps/Database.cpp
+
 clean:
-	rm -rf bin/*
+	rm -f bin/* bin/deps/*
