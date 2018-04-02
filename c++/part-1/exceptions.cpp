@@ -26,7 +26,7 @@ int main()
     {
         tryToDivide();
     }
-    catch (const std::exception& exception)
+    catch (const std::exception &exception)
     {
         std::cout << "Exception caught: " << exception.what() << std::endl;
     }

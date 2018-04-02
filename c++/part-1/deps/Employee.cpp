@@ -1,14 +1,13 @@
 #include <iostream>
 #include "Employee.h"
 
-namespace Records
-{
-    Employee::Employee():
-        mFirstName(""),
-        mLastName(""),
-        mEmployeeNumber(-1),
-        mSalary(kDefaultStartingSalary),
-        mIsHired(false)
+namespace Records {
+    Employee::Employee() :
+            mFirstName(""),
+            mLastName(""),
+            mEmployeeNumber(-1),
+            mSalary(kDefaultStartingSalary),
+            mIsHired(false)
     {}
 
     void Employee::promote(int raiseAmount)
@@ -46,7 +45,7 @@ namespace Records
         mFirstName = firstName;
     }
 
-    const std::string& Employee::getFirstName() const
+    const std::string &Employee::getFirstName() const
     {
         return mFirstName;
     }
@@ -56,7 +55,7 @@ namespace Records
         mLastName = lastName;
     }
 
-    const std::string& Employee::getLastName() const
+    const std::string &Employee::getLastName() const
     {
         return mLastName;
     }
